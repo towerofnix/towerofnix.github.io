@@ -9,7 +9,7 @@ var importHTML = function(url, insertLoc, mode, query) {
     if (this.readyState === DONE) {
       var elementsToAddTo = document.querySelectorAll(insertLoc);
       for (var i = 0; i < elementsToAddTo.length; i++) {
-        elementsToAddTo.appendChild(
+        elementsToAddTo[i].appendChild(
           new DOMParser().parseFromString(response, "text/html")
         );
       }
