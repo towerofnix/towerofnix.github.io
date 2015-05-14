@@ -1,7 +1,7 @@
 // 100% swaggy way to make a page
 // Who needs PHP?
 
-var import = function(url, insertLoc, mode, query) {
+var importHTML = function(url, insertLoc, mode, query) {
   var request = new XMLHttpRequest();
   
   request.onreadystatechange = function(response) {
@@ -22,5 +22,5 @@ var import = function(url, insertLoc, mode, query) {
 };
 
 window.onload = function() {
-  import("footer.html", "body");
+  importHTML("footer.html", "body");
 };
