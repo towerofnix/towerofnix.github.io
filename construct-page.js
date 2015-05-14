@@ -10,7 +10,7 @@ var importHTML = function(url, insertLoc, mode, query) {
       var elementsToAddTo = document.querySelectorAll(insertLoc);
       for (var i = 0; i < elementsToAddTo.length; i++) {
         elementsToAddTo[i].appendChild(
-          new DOMParser().parseFromString(response, "text/html")
+          new DOMParser().parseFromString(response, "text/html").getElementsByTagName("body")[0]
         );
       }
     }
