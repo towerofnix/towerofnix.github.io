@@ -5,7 +5,7 @@
 
 // TODO Make with fetch or XMLHttpRequest for cross-browser?
 
-window.onload = function() {
+document.addEventListener('load', function() {
   var links = document.getElementsByTagName("link");
   for (var l = 0; l < links.length; l++) {
     if (links[l].rel === "import") {
@@ -13,4 +13,4 @@ window.onload = function() {
       targetElement.appendChild(links[l].import);
     }
   }
-};
+});
