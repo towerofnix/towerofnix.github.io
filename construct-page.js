@@ -13,4 +13,5 @@ var require = function(targetFile, query, insert) {
   });
 };
 
+require("/header.html", "head", "head");
 require("/footer.html", "body", "body");
