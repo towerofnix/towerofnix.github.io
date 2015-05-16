@@ -9,6 +9,7 @@ var require = function(targetFile, query, insert) {
     return response.text();
   }).then(function(body) {
     var bodyDOM = domParser.parseFromString(body, "text/html").querySelector(query);
+for
     document.querySelector(insert).appendChild(bodyDOM);
   });
 };
