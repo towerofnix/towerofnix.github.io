@@ -5,12 +5,12 @@
 
 // TODO Make with fetch or XMLHttpRequest for cross-browser?
 
-document.setTimeout(function() {
-  var links = document.getElementsByTagName("link");
-  for (var l = 0; l < links.length; l++) {
-    if (links[l].rel === "import") {
-      var targetElement = document.querySelector(links[l].title);
-      targetElement.appendChild(links[l].import);
-    }
+var links = document.getElementsByTagName("link");
+for (var l = 0; l < links.length; l++) {
+  if (links[l].rel === "import") {
+    links[l].addEventListener('load', function() {
+      var targetElement = document.querySelector(this.title);
+      targetElement.appendChild(this.import);
+    });
   }
-}, 1000);
+}
