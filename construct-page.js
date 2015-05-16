@@ -9,7 +9,7 @@ document.addEventListener('load', function() {
   var links = document.getElementsByTagName("link");
   for (var l = 0; l < links.length; l++) {
     if (links[l].rel === "import") {
-      console.log(links[l].title);
+      console.log(links[l].title, links[l].import);
     }
   }
 });
