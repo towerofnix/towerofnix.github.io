@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Helvetica Neue';
+  background: rgb(55, 85, 225);
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7.5vw;
+  text-align: center;
+}
+
+.header-text-light, .header-text-bold, .header-text-hidden {
+  display: inline-block;
+}
+
+.header-text-light {
+  color: rgb(48, 58, 84);
+  text-shadow: 0 0 30px rgba(48, 48, 64, 0.7);
+  transition: margin-right 0.5s;
+}
+
+.header-text-bold {
+  color: rgb(32, 32, 78);
+  text-shadow: 0 0 16px rgb(32, 32, 48);
+  transition: margin-left 0.5s;
+}
+
+.header-text-hidden {
+  opacity: 0;
+  color: rgb(40, 40, 100);
+  text-shadow: 0 0 10px rgb(40, 40, 100);
+  position: absolute;
+  display: inline-block;
+  transform: translateX(-0.2em);
+  transition: opacity 0.5s;
+}
+
+header.star .header-text-hidden {
+  opacity: 1;
+}
+
+header.star .header-text-light {
+  margin-right: 0.4em;
+}
+
+header.star .header-text-bold {
+  margin-left: 0.2em;
+}
+
+header h2 {
+  color: #33A;
+  text-shadow: 0 0.045em 0 #229;
+}
+
+.header-float-bottom {
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 100%;
+  color: white;
+  opacity: 0.1;
+  text-align: center;
+  transition: opacity 0.2s;
+  cursor: default;
+}
+
+body.scrolled .header-float-bottom {
+  opacity: 0;
+}
+
+/* -- */
+
+main {
+  width: 100vw;
+  min-height: 80vh;
+  margin-bottom: 10vh;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #229;
+  border-bottom: 4px solid #33A;
+  padding: 40px;
+  margin-top: -4px;
+  background: white;
+  color: black;
+  line-height: 1.5em;
+}

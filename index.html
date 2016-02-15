@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>oh</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1><span class="header-text-light">towerof</span><span class="header-text-hidden">*</span><span class="header-text-bold">nix</span></h1>
+        <h2>(aka liam4)</h2>
+      </div>
+
+      <div class='header-float-bottom'>&#xFE40;</div>
+    </header>
+    <main>
+      <p>Too fancy for you!</p>
+      <p>One could write themself a portfolio here..</p>
+    </main>
+    <script>
+    var star = document.querySelector('header h1');
+    var header = document.querySelector('header');
+    star.addEventListener('mouseover', function() {
+      header.classList.add('star');
+    });
+    star.addEventListener('mouseleave', function() {
+      header.classList.remove('star');
+    });
+    function checkScroll() {
+      setTimeout(function() {
+        if (window.pageYOffset < 20) {
+          document.body.classList.remove('scrolled');
+        } else {
+          document.body.classList.add('scrolled');
+        }
+      }, 1);
+    }
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+    </script>
+  </body>
+</html>
